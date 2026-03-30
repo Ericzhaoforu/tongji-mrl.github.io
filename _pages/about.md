@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='#'>We are a student team from Tongji University focusing on Autonomous Surface Vehicles (USVs) for RobotX 2026.</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
