@@ -6,7 +6,7 @@ subtitle: Tongji MRL is a student team from Tongji University focused on autonom
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: TJMRL.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Tongji University</p>
