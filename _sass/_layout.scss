@@ -8,6 +8,9 @@ body {
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
+  background-image: var(--global-page-gradient);
+  background-attachment: fixed;
+  min-height: 100vh;
 
   h1,
   h2,
@@ -31,6 +34,22 @@ body.sticky-bottom-footer {
 
 .container {
   max-width: v.$max-content-width;
+}
+
+.container[role="main"] {
+  padding: 2.25rem 2rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 24px;
+  background: var(--global-panel-bg-color);
+  box-shadow: 0 24px 70px rgba(0, 54, 159, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+@media (max-width: 576px) {
+  .container[role="main"] {
+    padding: 1.5rem 1.1rem;
+    border-radius: 18px;
+  }
 }
 
 // Profile
