@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.tongji-mrl.org/al-folio/sitemap.xml
+Sitemap: https://www.tongji-mrl.org/sitemap.xml
