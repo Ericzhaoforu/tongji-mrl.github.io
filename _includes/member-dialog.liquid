@@ -1,0 +1,43 @@
+{% assign member = include.member %}
+<dialog
+  class="member-dialog"
+  id="dialog-{{ member.id }}"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="dialog-title-{{ member.id }}"
+  data-member-id="{{ member.id }}"
+>
+  <div class="member-dialog-panel">
+    <button class="member-dialog-close" type="button" aria-label="Close {{ member.name_en }} profile" data-dialog-close>
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="member-dialog-photo">
+      <img src="{{ member.photo | relative_url }}" alt="{{ member.name_en }}">
+    </div>
+    <div class="member-dialog-content">
+      <p class="member-dialog-kicker">{{ member.group }}</p>
+      <h2 id="dialog-title-{{ member.id }}">
+        {{ member.name_en }}
+        {% if member.name_zh %}<span>{{ member.name_zh }}</span>{% endif %}
+      </h2>
+      {% if member.role %}<p class="member-dialog-role">{{ member.role }}</p>{% endif %}
+      {% if member.responsibilities and member.responsibilities.size > 0 %}
+        <h3>Responsibilities</h3>
+        <ul>
+          {% for responsibility in member.responsibilities %}<li>{{ responsibility }}</li>{% endfor %}
+        </ul>
+      {% endif %}
+      {% if member.bio %}<h3>About</h3><p>{{ member.bio }}</p>{% endif %}
+      {% if member.email or member.links.github or member.links.linkedin %}
+        <div class="member-dialog-links" aria-label="{{ member.name_en }} links">
+          {% if member.email %}<a href="mailto:{{ member.email }}">Email</a>{% endif %}
+          {% if member.links.github %}<a href="{{ member.links.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>{% endif %}
+          {% if member.links.linkedin %}<a href="{{ member.links.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>{% endif %}
+        </div>
+      {% endif %}
+      {% unless member.bio or member.email or member.links.github or member.links.linkedin or member.responsibilities.size > 0 %}
+        <p class="member-dialog-empty">Additional profile details will be published after confirmation.</p>
+      {% endunless %}
+    </div>
+  </div>
+</dialog>

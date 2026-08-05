@@ -1,4 +1,6 @@
-# al-folio
+# Tongji MRL Website
+
+This repository contains the official Tongji MRL team website for RobotX 2026 preparation. It is built with the al-folio Jekyll theme.
 
 <div align="center">
 
@@ -557,3 +559,51 @@ Our most active contributors are welcome to join the maintainers team. If you ar
 The theme is available as open source under the terms of the [MIT License](https://github.com/alshedivat/al-folio/blob/main/LICENSE).
 
 Originally, **al-folio** was based on the [\*folio theme](https://github.com/bogoli/-folio) (published by [Lia Bogoev](https://liabogoev.com) and under the MIT license). Since then, it got a full re-write of the styles and many additional cool features.
+## 宣传组网站内容更新指南
+
+本仓库是 Tongji MRL RobotX 2026 官网。正式页面只应使用已经核实、确认可公开的队伍资料，不要使用 al-folio 示例内容代替队伍成果。
+
+### 替换 Hero 背景和文案
+
+编辑 `_data/home.yml`。`hero.background` 填写 `assets/img/` 下的真实队伍或机器人图片路径，`background_alt` 必须准确描述图片。`title`、`subtitle`、`event` 和 `introduction` 控制首页 Hero 文案。建议使用横向高清图片；Jekyll 构建时会生成响应式 WebP。
+
+### 添加或更新成员
+
+编辑 `_data/team.yml`。每名成员使用唯一的 `id`，填写已经确认的 `name_zh`、`name_en`、`role`、`group` 和 `photo`。`responsibilities` 是职责列表，`email`、`bio`、`links.github`、`links.linkedin` 仅在本人确认后填写。空字段不会显示。`assignments` 控制成员出现在哪个子组及是否属于辅助参与。
+
+### 增加系统资料
+
+编辑 `_data/systems.yml`。可以更新系统的 `role`、`status`、`related_missions`、`description` 和 `image`。只有经过确认的能力和状态才可以发布，不要填写推测参数。
+
+### 更新任务状态
+
+编辑 `_data/missions.yml`。任务状态使用 `Planning`、`In Development`、`Testing` 或 `Verified`。只有获得队伍确认后才能从 `Planning` 调整到其他状态。`overview`、`systems`、`highlights` 和 `development_note` 分别控制任务概览、涉及系统、任务要点和统一准备状态说明。
+
+### 新增测试记录
+
+编辑 `_data/tests.yml`。每条记录可包含 `title`、`type`、`date`、`location`、`mission`、`systems`、`objective`、`operating_time`、`result`、`issues`、`next_steps`、`photos`、`video` 和 `verified`。`type` 使用 `simulation` 或 `field`。只有内部确认后才设置 `verified: true`；未确认记录不会作为正式结果显示。
+
+### 新增 Media 素材
+
+编辑 `_data/media.yml`，填写 `title`、`category`、`date`、`image`、`video`、`alt`、`description` 和 `verified`。分类名称必须与 Media 页面已有分类一致。图片必须有准确 alt；只有确认属于 Tongji MRL 且可公开的素材才能设置 `verified: true`。
+
+### 新增赞助商
+
+编辑 `_data/sponsors.yml`，填写 `name`、`logo`、`url`、`level` 和 `alt`。仅在获得名称、Logo、链接及展示授权后添加。
+
+### 新增新闻
+
+在 `_news/` 新建 Markdown 文件，例如 `2026-01-15-team-update.md`。Front matter 至少填写 `layout: post`、准确标题、ISO 日期和 `related_posts: false`。不要设置 `published: false`，否则不会发布。
+
+### 本地预览和检查
+
+推荐运行 `docker compose pull` 和 `docker compose up`，然后访问 `http://localhost:8080`。提交前运行 `npx prettier . --check` 和 `bundle exec jekyll build`，并检查首页、成员弹窗、RobotX、Media、Join Us、News 和移动端菜单。
+
+### 避免破坏 YAML
+
+- 使用两个空格缩进，不使用 Tab。
+- 包含冒号、井号等特殊字符的文字使用引号。
+- 日期统一使用 `YYYY-MM-DD`。
+- 列表项以 `-` 开始，同一层级保持相同缩进。
+- 不确定的真实资料保持为空，不要填写占位假数据。
+- 修改后必须构建，确认没有 YAML 解析错误。

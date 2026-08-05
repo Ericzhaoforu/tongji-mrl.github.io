@@ -1,0 +1,33 @@
+{% assign member = include.member %}
+{% if include.assignment.auxiliary %}
+  <div class="member-row member-row-support" aria-label="{{ member.name_en }}, auxiliary member of {{ include.assignment.subgroup }}">
+    <img class="member-photo" src="{{ member.photo | relative_url }}" alt="">
+    <span class="member-primary">
+      <strong class="member-name">{{ member.name_en }}</strong>
+      {% if member.name_zh %}<span class="member-name-zh">{{ member.name_zh }}</span>{% endif %}
+      <span class="member-group">{{ include.assignment.subgroup }}</span>
+    </span>
+    <span class="member-view member-view-muted">Auxiliary member</span>
+  </div>
+{% else %}
+  <button
+    class="member-trigger {% if include.variant == "leadership" %}team-card {{ member.card_style }}{% else %}member-row{% endif %}"
+    type="button"
+    data-member-target="{{ member.id }}"
+    aria-haspopup="dialog"
+    aria-controls="dialog-{{ member.id }}"
+  >
+    <img class="member-photo" src="{{ member.photo | relative_url }}" alt="{{ member.name_en }}">
+    <span class="member-primary">
+      <strong class="member-name">{{ member.name_en }}</strong>
+      {% if member.name_zh %}<span class="member-name-zh">{{ member.name_zh }}</span>{% endif %}
+      {% if include.assignment %}<span class="member-group">{{ include.assignment.subgroup }}</span>{% else %}<span class="member-group">{{ member.group }}</span>{% endif %}
+    </span>
+    {% if include.variant == "leadership" %}
+      <span class="team-role">{{ member.role }}</span>
+    {% elsif include.assignment.role %}
+      <span class="member-role">{{ include.assignment.role }}</span>
+    {% endif %}
+    <span class="member-view">View profile <span aria-hidden="true">→</span></span>
+  </button>
+{% endif %}

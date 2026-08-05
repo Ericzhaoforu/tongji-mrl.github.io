@@ -1,0 +1,24 @@
+<div class="team-subgroup">
+  {% if include.title %}<h4>{{ include.title }}</h4>{% endif %}
+  <ul class="member-list">
+    {% comment %}Render subgroup leaders first, regardless of their order in the data file.{% endcomment %}
+    {% for member in site.data.team.members %}
+      {% for assignment in member.assignments %}
+        {% if assignment.subgroup == include.subgroup and assignment.role == "Leader" %}
+          <li>
+            {% include team-member-trigger.liquid member=member assignment=assignment variant="list" %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    {% for member in site.data.team.members %}
+      {% for assignment in member.assignments %}
+        {% if assignment.subgroup == include.subgroup and assignment.role != "Leader" %}
+          <li class="{% if assignment.auxiliary %}support{% endif %}">
+            {% include team-member-trigger.liquid member=member assignment=assignment variant="list" %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </ul>
+</div>
