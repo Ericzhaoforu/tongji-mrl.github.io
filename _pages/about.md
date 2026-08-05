@@ -115,5 +115,6 @@ immersive_hero: true
         <p>We appreciate the organizations and individuals who support our work. Sponsor information will be published after confirmation.</p>
       {% endif %}
     </section>
+
   </div>
 </div>

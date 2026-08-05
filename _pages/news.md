@@ -6,7 +6,7 @@ description: Verified news and development updates from Tongji MRL.
 ---
 
 {% if site.news and site.news.size > 0 %}
-  {% include news.liquid %}
+{% include news.liquid %}
 {% else %}
-  Team updates will be published here.
+Team updates will be published here.
 {% endif %}

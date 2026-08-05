@@ -4,7 +4,9 @@
     <img class="member-photo" src="{{ member.photo | relative_url }}" alt="">
     <span class="member-primary">
       <strong class="member-name">{{ member.name_en }}</strong>
-      {% if member.name_zh %}<span class="member-name-zh">{{ member.name_zh }}</span>{% endif %}
+      {% if member.name_zh -%}
+        <span class="member-name-zh">{{ member.name_zh }}</span>
+      {%- endif %}
       <span class="member-group">{{ include.assignment.subgroup }}</span>
     </span>
     <span class="member-view member-view-muted">Auxiliary member</span>
@@ -20,10 +22,16 @@
     <img class="member-photo" src="{{ member.photo | relative_url }}" alt="{{ member.name_en }}">
     <span class="member-primary">
       <strong class="member-name">{{ member.name_en }}</strong>
-      {% if member.name_zh %}<span class="member-name-zh">{{ member.name_zh }}</span>{% endif %}
-      {% if include.assignment %}<span class="member-group">{{ include.assignment.subgroup }}</span>{% else %}<span class="member-group">{{ member.group }}</span>{% endif %}
+      {% if member.name_zh -%}
+        <span class="member-name-zh">{{ member.name_zh }}</span>
+      {%- endif %}
+      {% if include.assignment -%}
+        <span class="member-group">{{ include.assignment.subgroup }}</span>
+      {%- else -%}
+        <span class="member-group">{{ member.group }}</span>
+      {%- endif %}
     </span>
-    {% if include.variant == "leadership" %}
+    {% if include.variant == 'leadership' %}
       <span class="team-role">{{ member.role }}</span>
     {% elsif include.assignment.role %}
       <span class="member-role">{{ include.assignment.role }}</span>

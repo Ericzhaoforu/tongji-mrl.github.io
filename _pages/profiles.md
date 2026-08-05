@@ -47,11 +47,12 @@ nav_order: 7
       <h3>Outreach Group</h3>
       {% include team-subgroup.liquid subgroup="Outreach" %}
     </section>
+
   </div>
 </div>
 
 {% for member in site.data.team.members %}
-  {% include member-dialog.liquid member=member %}
+{% include member-dialog.liquid member=member %}
 {% endfor %}
 
 ## Video Showcase

@@ -559,6 +559,7 @@ Our most active contributors are welcome to join the maintainers team. If you ar
 The theme is available as open source under the terms of the [MIT License](https://github.com/alshedivat/al-folio/blob/main/LICENSE).
 
 Originally, **al-folio** was based on the [\*folio theme](https://github.com/bogoli/-folio) (published by [Lia Bogoev](https://liabogoev.com) and under the MIT license). Since then, it got a full re-write of the styles and many additional cool features.
+
 ## 宣传组网站内容更新指南
 
 本仓库是 Tongji MRL RobotX 2026 官网。正式页面只应使用已经核实、确认可公开的队伍资料，不要使用 al-folio 示例内容代替队伍成果。

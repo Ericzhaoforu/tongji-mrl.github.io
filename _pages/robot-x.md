@@ -42,6 +42,7 @@ Tongji MRL is a multidisciplinary student team from Tongji University developing
 ## Mission Tasks {#mission-tasks}
 
 {% for mission in site.data.missions %}
+
   <article class="mission-card" id="{{ mission.id }}">
     <header class="mission-header">
       <span class="mission-status">{{ mission.status }}</span>
@@ -79,6 +80,7 @@ Tongji MRL is a multidisciplinary student team from Tongji University developing
 
 {% assign simulation_tests = verified_tests | where: "type", "simulation" %}
 {% if simulation_tests.size > 0 %}
+
   <div class="test-grid">
     {% for test in simulation_tests %}
       {% include test-record.liquid test=test %}
@@ -92,6 +94,7 @@ Tongji MRL is a multidisciplinary student team from Tongji University developing
 
 {% assign field_tests = verified_tests | where: "type", "field" %}
 {% if field_tests.size > 0 %}
+
   <div class="test-grid">
     {% for test in field_tests %}
       {% include test-record.liquid test=test %}

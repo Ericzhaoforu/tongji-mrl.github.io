@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (event.key !== "Tab") return;
 
       const focusable = Array.from(dialog.querySelectorAll(focusableSelector)).filter(
-        (element) => !element.hasAttribute("hidden") && element.getClientRects().length > 0,
+        (element) => !element.hasAttribute("hidden") && element.getClientRects().length > 0
       );
       if (focusable.length === 0) return;
 
