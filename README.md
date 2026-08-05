@@ -252,7 +252,7 @@ Run the test yourself: [Google Lighthouse PageSpeed Insights](https://pagespeed.
 
 <!--ts-->
 
-- [al-folio](#al-folio)
+- [Tongji MRL Website](#tongji-mrl-website)
   - [User community](#user-community)
   - [Lighthouse PageSpeed Insights](#lighthouse-pagespeed-insights)
     - [Desktop](#desktop)
@@ -289,6 +289,17 @@ Run the test yourself: [Google Lighthouse PageSpeed Insights](https://pagespeed.
     - [All Contributors](#all-contributors)
   - [Star History](#star-history)
   - [License](#license)
+  - [宣传组网站内容更新指南](#宣传组网站内容更新指南)
+    - [替换 Hero 背景和文案](#替换-hero-背景和文案)
+    - [添加或更新成员](#添加或更新成员)
+    - [增加系统资料](#增加系统资料)
+    - [更新任务状态](#更新任务状态)
+    - [新增测试记录](#新增测试记录)
+    - [新增 Media 素材](#新增-media-素材)
+    - [新增赞助商](#新增赞助商)
+    - [新增新闻](#新增新闻)
+    - [本地预览和检查](#本地预览和检查)
+    - [避免破坏 YAML](#避免破坏-yaml)
 
 <!--te-->
 
