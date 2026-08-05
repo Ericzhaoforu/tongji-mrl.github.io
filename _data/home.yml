@@ -1,0 +1,8 @@
+hero:
+  use_background_image: false
+  background: assets/img/TJMRL.jpg
+  background_alt: Tongji MRL team at Tongji University
+  title: Tongji MRL
+  subtitle: Autonomous Systems Across Surface, Underwater and Air
+  event: Preparing for the 2026 Maritime RobotX Challenge
+  introduction: A multidisciplinary marine robotics team from Tongji University

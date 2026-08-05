@@ -1,0 +1,184 @@
+members:
+  - id: kun-cao
+    name_zh:
+    name_en: Kun Cao
+    role: Supervisor
+    group: Leadership
+    photo: assets/img/team/Kun_Cao.jpg
+    leadership: true
+    card_style: supervisor
+    responsibilities: []
+    email:
+    bio:
+    links: {}
+    assignments: []
+  - id: jiayan-zhao
+    name_zh:
+    name_en: Jiayan Zhao
+    role: Team Leader
+    group: Leadership
+    photo: assets/img/team/Jiayan_Zhao.jpg
+    leadership: true
+    card_style: coordinator
+    responsibilities: []
+    email:
+    bio:
+    links: {}
+    assignments: []
+  - id: yi-wang
+    name_zh:
+    name_en: Yi Wang
+    role: Deputy Team Leader
+    group: Leadership
+    photo: assets/img/team/Yi_Wang.jpg
+    leadership: true
+    card_style: coordinator
+    responsibilities: []
+    email:
+    bio:
+    links: {}
+    assignments: []
+  - id: hongye-ma
+    name_zh:
+    name_en: Hongye Ma
+    role: Leader
+    group: Hardware
+    photo: assets/img/team/Hongye_Ma.jpg
+    leadership: false
+    responsibilities: []
+    email:
+    bio:
+    links: {}
+    assignments:
+      - subgroup: Control
+        role: Leader
+        auxiliary: false
+  - id: zhanpeng-qu
+    name_zh:
+    name_en: Zhanpeng Qu
+    role:
+    group: Hardware
+    photo: assets/img/team/Zhanpeng_Qu.jpg
+    leadership: false
+    responsibilities: []
+    email:
+    bio:
+    links: {}
+    assignments:
+      - subgroup: Control
+        role:
+        auxiliary: false
+      - subgroup: Planning
+        role:
+        auxiliary: true
+  - id: yi-pang
+    name_zh:
+    name_en: Yi Pang
+    role: Leader
+    group: Hardware
+    photo: assets/img/team/Yi_Pang.jpg
+    leadership: false
+    responsibilities: []
+    email:
+    bio:
+    links: {}
+    assignments:
+      - subgroup: Mechanics
+        role: Leader
+        auxiliary: false
+  - id: xuanyu-yang
+    name_zh:
+    name_en: Xuanyu Yang
+    role: Leader
+    group: Software
+    photo: assets/img/team/Xuanyu_Yang.jpg
+    leadership: false
+    responsibilities: []
+    email:
+    bio:
+    links: {}
+    assignments:
+      - subgroup: Perception
+        role: Leader
+        auxiliary: false
+  - id: yuhan-li
+    name_zh:
+    name_en: Yuhan Li
+    role:
+    group: Outreach
+    photo: assets/img/team/Yuhan_Li.jpg
+    leadership: false
+    responsibilities: []
+    email:
+    bio:
+    links: {}
+    assignments:
+      - subgroup: Perception
+        role:
+        auxiliary: true
+      - subgroup: Outreach
+        role:
+        auxiliary: false
+  - id: ci-song
+    name_zh:
+    name_en: Ci Song
+    role: Leader
+    group: Software
+    photo: assets/img/team/Ci_Song.jpg
+    leadership: false
+    responsibilities: []
+    email:
+    bio:
+    links: {}
+    assignments:
+      - subgroup: Planning
+        role: Leader
+        auxiliary: false
+  - id: yaxin-shao
+    name_zh:
+    name_en: Yaxin Shao
+    role:
+    group: Software
+    photo: assets/img/team/Yaxin_Shao.jpg
+    leadership: false
+    responsibilities: []
+    email:
+    bio:
+    links: {}
+    assignments:
+      - subgroup: Planning
+        role:
+        auxiliary: false
+  - id: yunhuan-cai
+    name_zh:
+    name_en: Yunhuan Cai
+    role:
+    group: Software
+    photo: assets/img/team/Yunhuan_Cai.jpg
+    leadership: false
+    responsibilities: []
+    email:
+    bio:
+    links: {}
+    assignments:
+      - subgroup: Planning
+        role:
+        auxiliary: false
+  - id: cailin-yang
+    name_zh:
+    name_en: Cailin Yang
+    role: Leader
+    group: Outreach
+    photo: assets/img/team/Cailin_Yang.jpg
+    leadership: false
+    responsibilities: []
+    email:
+    bio:
+    links: {}
+    assignments:
+      - subgroup: Planning
+        role:
+        auxiliary: true
+      - subgroup: Outreach
+        role: Leader
+        auxiliary: false

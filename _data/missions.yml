@@ -1,0 +1,40 @@
+- id: mission-task-1
+  short_title: Task 1
+  title: Mission Task 1 — Safe Passage
+  status: Planning
+  overview: Identify lighted buoys, determine a safe entrance and exit, and autonomously navigate the USV through the buoy area while avoiding obstacles.
+  systems: [USV, UAV]
+  highlights:
+    - Lighted buoy identification
+    - Safe entrance and exit determination
+    - Autonomous USV navigation
+    - Obstacle avoidance
+    - UAV and USV coordination
+  development_note: Technical approach, progress updates and verified testing media will be published as development continues.
+- id: mission-task-3
+  short_title: Task 3
+  title: Mission Task 3 — Coordinated Logistics
+  status: Planning
+  overview: Identify the safe berthing area, autonomously dock the USV, direct water at the correct window, and support UAV payload pickup and delivery with information shared across systems.
+  systems: [USV, UAV]
+  highlights:
+    - Safe berthing area identification
+    - Autonomous USV docking
+    - Water delivery to the correct window
+    - UAV payload pickup and delivery
+    - Information exchange between systems
+  development_note: Technical approach, progress updates and verified testing media will be published as development continues.
+- id: mission-task-4
+  short_title: Task 4
+  title: Mission Task 4 — Dynamic Incident Response
+  status: Planning
+  overview: Receive a dynamic RoboCommand assignment, interrupt or adjust the current task, travel to a designated GPS area, loiter and report readiness, and then resume the original task. Advanced Tier preparation also considers response to a temporary exclusion zone.
+  systems: [USV, Surfaced UUV, UAV]
+  highlights:
+    - Dynamic RoboCommand task reception
+    - Current mission interruption or adjustment
+    - Navigation to a designated GPS area
+    - Loiter and readiness reporting
+    - Original mission resumption
+    - Advanced Tier temporary exclusion-zone response
+  development_note: Technical approach, progress updates and verified testing media will be published as development continues.

@@ -1,0 +1,71 @@
+<article class="test-card">
+  <h4>{{ include.test.title | default: include.test.mission }}</h4>
+  <dl class="test-metadata">
+    {% if include.test.date %}
+      <div>
+        <dt>Date</dt>
+        <dd>{{ include.test.date }}</dd>
+      </div>
+    {% endif %}
+    {% if include.test.location %}
+      <div>
+        <dt>Location</dt>
+        <dd>{{ include.test.location }}</dd>
+      </div>
+    {% endif %}
+    {% if include.test.mission %}
+      <div>
+        <dt>Mission</dt>
+        <dd>{{ include.test.mission }}</dd>
+      </div>
+    {% endif %}
+    {% if include.test.systems %}
+      <div>
+        <dt>Systems</dt>
+        <dd>{{ include.test.systems | join: ', ' }}</dd>
+      </div>
+    {% endif %}
+    {% if include.test.objective %}
+      <div>
+        <dt>Objective</dt>
+        <dd>{{ include.test.objective }}</dd>
+      </div>
+    {% endif %}
+    {% if include.test.operating_time %}
+      <div>
+        <dt>Operating Time</dt>
+        <dd>{{ include.test.operating_time }}</dd>
+      </div>
+    {% endif %}
+    {% if include.test.result %}
+      <div>
+        <dt>Result</dt>
+        <dd>{{ include.test.result }}</dd>
+      </div>
+    {% endif %}
+    {% if include.test.issues %}
+      <div>
+        <dt>Issues Found</dt>
+        <dd>{{ include.test.issues }}</dd>
+      </div>
+    {% endif %}
+    {% if include.test.next_steps %}
+      <div>
+        <dt>Next Steps</dt>
+        <dd>{{ include.test.next_steps }}</dd>
+      </div>
+    {% endif %}
+  </dl>
+  {% if include.test.photos %}
+    <div class="test-media">
+      {% for photo in include.test.photos %}
+        {% include figure.liquid path=photo.image alt=photo.alt class="img-fluid rounded" %}
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if include.test.video %}
+    <div class="responsive-video">
+      {% include video.liquid path=include.test.video alt=include.test.video_alt controls=true %}
+    </div>
+  {% endif %}
+</article>
