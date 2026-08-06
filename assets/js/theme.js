@@ -1,22 +1,14 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-// Toggle through light, dark, and system theme settings.
+// Toggle directly between the only two supported themes.
 let toggleThemeSetting = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
-    setThemeSetting("light");
-  } else if (themeSetting == "light") {
-    setThemeSetting("dark");
-  } else {
-    setThemeSetting("system");
-  }
+  const nextTheme = determineThemeSetting() === "dark" ? "light" : "dark";
+  setThemeSetting(nextTheme);
 };
 
 // Change the theme setting and apply the theme.
 let setThemeSetting = (themeSetting) => {
   localStorage.setItem("theme", themeSetting);
-
-  document.documentElement.setAttribute("data-theme-setting", themeSetting);
 
   applyTheme();
 };
@@ -27,8 +19,8 @@ let applyTheme = () => {
 
   transTheme();
   setHighlight(theme);
+  setDiff2htmlStylesheetTheme(theme);
   setGiscusTheme(theme);
-  setSearchTheme(theme);
   setCookieConsentTheme(theme);
   updateCalendarUrl();
 
@@ -58,6 +50,7 @@ let applyTheme = () => {
   }
 
   document.documentElement.setAttribute("data-theme", theme);
+  updateThemeToggle(theme);
 
   // Add class to tables.
   let tables = document.getElementsByTagName("table");
@@ -98,6 +91,15 @@ let setHighlight = (theme) => {
     document.getElementById("highlight_theme_dark").media = "none";
     document.getElementById("highlight_theme_light").media = "";
   }
+};
+
+let setDiff2htmlStylesheetTheme = (theme) => {
+  const lightStylesheet = document.getElementById("diff2html_theme_light");
+  const darkStylesheet = document.getElementById("diff2html_theme_dark");
+  if (!lightStylesheet || !darkStylesheet) return;
+
+  lightStylesheet.media = theme === "dark" ? "none" : "screen";
+  darkStylesheet.media = theme === "dark" ? "screen" : "none";
 };
 
 let setGiscusTheme = (theme) => {
@@ -235,17 +237,6 @@ let setVegaLiteTheme = (theme) => {
   });
 };
 
-let setSearchTheme = (theme) => {
-  const ninjaKeys = document.querySelector("ninja-keys");
-  if (!ninjaKeys) return;
-
-  if (theme === "dark") {
-    ninjaKeys.classList.add("dark");
-  } else {
-    ninjaKeys.classList.remove("dark");
-  }
-};
-
 let setCookieConsentTheme = (theme) => {
   // Sync cookie consent modal with site's theme
   // The cookie consent library supports dark mode via the cc--darkmode class
@@ -265,49 +256,32 @@ let transTheme = () => {
   }, 500);
 };
 
-// Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "system".
+// Only explicit light and dark choices are supported. First visits default to light.
 let determineThemeSetting = () => {
-  let themeSetting = localStorage.getItem("theme");
-  if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
-    themeSetting = "system";
-  }
-  return themeSetting;
+  const themeSetting = localStorage.getItem("theme");
+  return themeSetting === "dark" ? "dark" : "light";
 };
 
-// Determine the computed theme, which can be "dark" or "light". If the theme setting is
-// "system", the computed theme is determined based on the user's system preference.
-let determineComputedTheme = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
-    const userPref = window.matchMedia;
-    if (userPref && userPref("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    } else {
-      return "light";
-    }
-  } else {
-    return themeSetting;
-  }
+let determineComputedTheme = () => determineThemeSetting();
+
+let updateThemeToggle = (theme) => {
+  const modeToggle = document.getElementById("light-toggle");
+  if (!modeToggle) return;
+
+  const nextTheme = theme === "dark" ? "light" : "dark";
+  modeToggle.setAttribute("aria-label", `Switch to ${nextTheme} mode`);
 };
 
 let initTheme = () => {
-  let themeSetting = determineThemeSetting();
-
+  const themeSetting = determineThemeSetting();
   setThemeSetting(themeSetting);
 
-  // Add event listener to the theme toggle button.
   document.addEventListener("DOMContentLoaded", function () {
-    const mode_toggle = document.getElementById("light-toggle");
+    const modeToggle = document.getElementById("light-toggle");
+    if (!modeToggle) return;
 
-    mode_toggle.addEventListener("click", function () {
-      toggleThemeSetting();
-    });
-  });
-
-  // Add event listener to the system theme preference change.
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
-    applyTheme();
+    updateThemeToggle(determineComputedTheme());
+    modeToggle.addEventListener("click", toggleThemeSetting);
   });
 };
 

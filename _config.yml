@@ -6,13 +6,14 @@ title: Tongji MRL # the website title (if blank, full name will be used instead)
 first_name: Tongji
 middle_name:
 last_name: MRL
-contact_note: >
-  Contact information will be updated soon.
+join_contact:
+  label: Official contact channel in preparation
+  url:
+  note: Recruitment dates and application steps will be published after confirmation.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Tongji MRL is a multidisciplinary marine robotics team from Tongji University developing autonomous surface, underwater and aerial systems for the 2026 Maritime RobotX Challenge.
-footer_text: >
-  Tongji University Marine Robotics Lab. Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: Tongji MRL, RobotX 2026, marine robotics, autonomous systems, USV, UUV, UAV
+  Tongji MRL is a multidisciplinary marine robotics team from Tongji University developing autonomous surface and aerial systems for the 2026 Maritime RobotX Challenge.
+footer_text: Tongji University
+keywords: Tongji MRL, RobotX 2026, marine robotics, autonomous systems, USV, UAV
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: # add the official team logo filename here when one is available in /assets/img/
 
@@ -53,7 +54,7 @@ external_services:
 
 navbar_fixed: true
 footer_fixed: false
-search_enabled: true
+search_enabled: false
 socials_in_search: true
 posts_in_search: false
 bib_search: true

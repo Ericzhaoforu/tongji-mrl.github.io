@@ -9,7 +9,7 @@
       {%- endif %}
       <span class="member-group">{{ include.assignment.subgroup }}</span>
     </span>
-    <span class="member-view member-view-muted">Auxiliary member</span>
+    <span class="member-auxiliary-label">Auxiliary</span>
   </div>
 {% else %}
   <button
@@ -36,6 +36,8 @@
     {% elsif include.assignment.role %}
       <span class="member-role">{{ include.assignment.role }}</span>
     {% endif %}
-    <span class="member-view">View profile <span aria-hidden="true">→</span></span>
+    {% unless include.assignment.role and include.variant != 'leadership' %}
+      <span class="member-view"><span class="sr-only">View profile</span><span aria-hidden="true">→</span></span>
+    {% endunless %}
   </button>
 {% endif %}

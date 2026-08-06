@@ -9,7 +9,7 @@ description: Systems, missions and testing progress for the 2026 Maritime RobotX
 
 ## Competition Overview
 
-Tongji MRL is a multidisciplinary student team from Tongji University developing autonomous marine robotic systems for the 2026 Maritime RobotX Challenge. Our current development spans surface, underwater and aerial platforms. The current mission focus is Mission Task 1, Mission Task 3 and Mission Task 4.
+Tongji MRL is a multidisciplinary student team from Tongji University developing autonomous marine robotic systems for the 2026 Maritime RobotX Challenge. Our current development spans surface and aerial platforms. The current mission focus is Mission Task 1, Mission Task 3 and Mission Task 4.
 
 <nav class="section-actions" aria-label="RobotX page sections">
   <a class="btn btn-outline-primary" href="#robotic-systems">Robotic Systems</a>
@@ -25,16 +25,28 @@ Tongji MRL is a multidisciplinary student team from Tongji University developing
       {% if system.image %}
         {% include figure.liquid path=system.image alt=system.name class="img-fluid rounded" %}
       {% else %}
-        <div class="system-image-placeholder" role="img" aria-label="{{ system.name }} image in preparation">Image in preparation</div>
+        <div class="system-image-placeholder" role="img" aria-label="{{ system.name }} image in preparation">Platform image pending</div>
       {% endif %}
       <span class="team-card-kicker">{{ system.abbreviation }}</span>
       <h3>{{ system.name }}</h3>
       <dl class="system-details">
         <div><dt>Role</dt><dd>{{ system.role }}</dd></div>
         <div><dt>Current Status</dt><dd>{{ system.status }}</dd></div>
+        <div>
+          <dt>Key Capabilities</dt>
+          <dd>
+            {% if system.key_capabilities.size > 0 %}
+              <ul class="system-capability-list">
+                {% for capability in system.key_capabilities %}<li>{{ capability }}</li>{% endfor %}
+              </ul>
+            {% else %}
+              To be confirmed
+            {% endif %}
+          </dd>
+        </div>
         <div><dt>Related Missions</dt><dd>{{ system.related_missions | join: ', ' }}</dd></div>
       </dl>
-      <p>{{ system.description }}</p>
+      {% if system.description %}<p>{{ system.description }}</p>{% endif %}
     </article>
   {% endfor %}
 </div>

@@ -1,6 +1,15 @@
 # Tongji MRL Website
 
-This repository contains the official Tongji MRL team website for RobotX 2026 preparation. It is built with the al-folio Jekyll theme.
+This repository contains the official Tongji MRL team website for RobotX 2026 preparation. It is built with Jekyll and the al-folio theme.
+
+The public website currently covers:
+
+- the Tongji MRL team, supervisor, leaders, subgroups and member profiles;
+- the USV and UAV systems currently under development;
+- preparation for RobotX 2026 Mission Tasks 1, 3 and 4;
+- verified testing records, media, news, sponsors and recruitment information.
+
+The site uses an explicit two-state light/dark theme. The selected theme is saved in the browser, and the site does not provide an internal search interface.
 
 <div align="center">
 
@@ -363,7 +372,7 @@ Comprehensive guides for all aspects of your al-folio website:
 
 ### Light/Dark Mode
 
-This template has a built-in light/dark mode. It detects the user preferred color scheme and automatically switches to it. You can also manually switch between light and dark mode by clicking on the sun/moon icon in the top right corner of the page.
+The website provides light and dark modes. New visitors start in light mode; clicking the theme button switches directly between the two modes, and the selected mode is saved in `localStorage` for future visits. The website does not follow the operating-system theme.
 
 <p align="center">
 <img src="readme_preview/light.png" width=400>
@@ -566,15 +575,15 @@ Originally, **al-folio** was based on the [\*folio theme](https://github.com/bog
 
 ### 替换 Hero 背景和文案
 
-编辑 `_data/home.yml`。`hero.background` 填写 `assets/img/` 下的真实队伍或机器人图片路径，`background_alt` 必须准确描述图片。`title`、`subtitle`、`event` 和 `introduction` 控制首页 Hero 文案。建议使用横向高清图片；Jekyll 构建时会生成响应式 WebP。
+编辑 `_data/home.yml`。`title`、`subtitle`、`event` 和 `introduction` 控制首页 Hero 文案。当前使用浅色无图片背景；`use_background_image: false` 时不会渲染或请求背景图。以后获得合适的横向实船测试照片后，可填写 `hero.background` 和准确的 `background_alt`，再将 `use_background_image` 改为 `true`。原图应放在 `assets/img/`，Jekyll 构建时会生成响应式 WebP。
 
 ### 添加或更新成员
 
-编辑 `_data/team.yml`。每名成员使用唯一的 `id`，填写已经确认的 `name_zh`、`name_en`、`role`、`group` 和 `photo`。`responsibilities` 是职责列表，`email`、`bio`、`links.github`、`links.linkedin` 仅在本人确认后填写。空字段不会显示。`assignments` 控制成员出现在哪个子组及是否属于辅助参与。
+编辑 `_data/team.yml`。每名成员使用唯一的 `id`，填写已经确认的 `name_zh`、`name_en`、`role`、`group` 和 `photo`。`responsibilities` 是职责列表，`email`、`bio`、`links.github`、`links.linkedin` 仅在本人确认后填写。空字段不会显示。`assignments` 控制成员所在子组：`role: Leader` 的成员会排在该组首位；`auxiliary: false` 表示主要归属并允许打开资料，`auxiliary: true` 表示辅助参与，只显示不可点击的灰色成员卡片。
 
 ### 增加系统资料
 
-编辑 `_data/systems.yml`。可以更新系统的 `role`、`status`、`related_missions`、`description` 和 `image`。只有经过确认的能力和状态才可以发布，不要填写推测参数。
+编辑 `_data/systems.yml`。当前网站只展示 USV 和 UAV，不包含 UUV。可以更新这两个系统的 `role`、`status`、`key_capabilities`、`related_missions`、`description` 和 `image`。只有经过确认的能力和状态才可以发布，不要填写推测参数。新增机器人类型前应先获得队伍确认，并同步检查首页、RobotX、任务数据和 SEO 文案。
 
 ### 更新任务状态
 
@@ -598,7 +607,7 @@ Originally, **al-folio** was based on the [\*folio theme](https://github.com/bog
 
 ### 本地预览和检查
 
-推荐运行 `docker compose pull` 和 `docker compose up`，然后访问 `http://localhost:8080`。提交前运行 `npx prettier . --check` 和 `bundle exec jekyll build`，并检查首页、成员弹窗、RobotX、Media、Join Us、News 和移动端菜单。
+推荐运行 `docker compose pull` 和 `docker compose up`，然后访问 `http://localhost:8080`。也可以在依赖已安装的环境中运行 `bundle exec jekyll serve`。提交前运行 `npm ci`、`npx prettier . --check` 和 `bundle exec jekyll build`，并检查首页、light/dark 切换、成员弹窗、RobotX、Media、Join Us、News 和移动端菜单。
 
 ### 避免破坏 YAML
 

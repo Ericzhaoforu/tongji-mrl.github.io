@@ -7,7 +7,7 @@ description: Verified photos and videos from Tongji MRL activities and RobotX 20
 
 <p class="page-lead">Verified Tongji MRL photos and videos. Categories without confirmed material remain clearly marked as in preparation.</p>
 
-{% assign media_categories = "Robot assembly|Simulation tests|Field and water tests|UAV tests|UUV tests|Team activities|RobotX 2026 preparation" | split: "|" %}
+{% assign media_categories = "Robot Assembly|Field Tests|Team Activities|Design Process" | split: "|" %}
 {% assign verified_media = site.data.media | where: "verified", true %}
 
 <div class="media-sections">
@@ -34,7 +34,7 @@ description: Verified photos and videos from Tongji MRL activities and RobotX 20
           {% endfor %}
         </div>
       {% else %}
-        <div class="compact-empty-state">Verified media in preparation.</div>
+        <div class="compact-empty-state">Media pending verification.</div>
       {% endif %}
     </section>
   {% endfor %}

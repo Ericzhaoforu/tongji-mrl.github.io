@@ -2,7 +2,7 @@
 layout: default
 title: Tongji MRL
 permalink: /
-description: Tongji MRL is a multidisciplinary marine robotics team from Tongji University developing autonomous surface, underwater and aerial systems for the 2026 Maritime RobotX Challenge.
+description: Tongji MRL is a multidisciplinary marine robotics team from Tongji University developing autonomous surface and aerial systems for the 2026 Maritime RobotX Challenge.
 immersive_hero: true
 ---
 
@@ -44,15 +44,15 @@ immersive_hero: true
   <div id="home-content" class="home-content">
     <section class="home-section home-reveal" aria-labelledby="home-introduction-title">
       <p class="home-section-kicker">Team Introduction</p>
-      <h2 id="home-introduction-title">Marine robotics across three domains</h2>
-      <p>Tongji MRL is a multidisciplinary student team from Tongji University developing autonomous marine robotic systems for the 2026 Maritime RobotX Challenge. Our current development spans surface, underwater and aerial platforms.</p>
+      <h2 id="home-introduction-title">Autonomous systems across surface and air</h2>
+      <p>Tongji MRL is a multidisciplinary student team from Tongji University developing autonomous marine robotic systems for the 2026 Maritime RobotX Challenge. Our current development spans surface and aerial platforms.</p>
       <a class="home-text-link" href="{{ '/people/' | relative_url }}">Meet the team <span aria-hidden="true">→</span></a>
     </section>
 
     <section class="home-section home-reveal" aria-labelledby="home-systems-title">
       <p class="home-section-kicker">Robotic Systems</p>
-      <h2 id="home-systems-title">USV, UUV and UAV</h2>
-      <div class="home-summary-grid">
+      <h2 id="home-systems-title">USV and UAV</h2>
+      <div class="home-summary-grid home-systems-grid">
         {% for system in site.data.systems %}
           <article class="home-summary-card">
             <span>{{ system.abbreviation }}</span>

@@ -10,7 +10,7 @@
   --global-code-bg-color: #{v.$code-bg-color-light};
   --global-text-color: #{v.$black-color};
   --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$blue-color};
+  --global-theme-color: #0076df;
   --global-hover-color: #{v.$blue-color-dark};
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #{v.$grey-color-dark};
@@ -21,6 +21,7 @@
   --global-page-gradient:
     radial-gradient(circle at top left, rgba(0, 118, 223, 0.18), transparent 32%), linear-gradient(180deg, #f8fbff 0%, #edf5ff 100%);
   --global-panel-bg-color: rgba(255, 255, 255, 0.78);
+  --global-navbar-bg-color: var(--global-panel-bg-color);
   --global-card-bg-color: #{v.$white-color};
   --global-highlight-color: #{v.$red-color-dark};
   --global-back-to-top-bg-color: rgba(
@@ -46,12 +47,8 @@
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
 }
-#light-toggle-system {
-  display: inline-block;
-}
-
 #light-toggle-dark {
-  display: none;
+  display: inline-block;
 }
 
 #light-toggle-light {
@@ -78,22 +75,32 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --global-bg-color: #091522;
-  --global-code-bg-color: #{v.$code-bg-color-dark};
-  --global-text-color: #{v.$grey-color-light};
-  --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$blue-color};
-  --global-hover-color: #7dc0ff;
+  --dark-bg: #0b1220;
+  --dark-navbar: #0e1728;
+  --dark-surface: #111b2e;
+  --dark-card: #17243a;
+  --dark-card-hover: #1d2e49;
+  --dark-text: #eaf0f8;
+  --dark-muted: #9aaac0;
+  --dark-accent: #5b8def;
+  --dark-accent-hover: #79a7ff;
+  --dark-border: rgba(148, 163, 184, 0.16);
+  --global-bg-color: var(--dark-bg);
+  --global-code-bg-color: var(--dark-surface);
+  --global-text-color: var(--dark-text);
+  --global-text-color-light: var(--dark-muted);
+  --global-theme-color: var(--dark-accent);
+  --global-hover-color: var(--dark-accent-hover);
   --global-hover-text-color: #{v.$white-color};
-  --global-footer-bg-color: #{v.$grey-color-light};
-  --global-footer-text-color: #{v.$grey-color-dark};
-  --global-footer-link-color: #{v.$black-color};
+  --global-footer-bg-color: var(--dark-navbar);
+  --global-footer-text-color: var(--dark-muted);
+  --global-footer-link-color: var(--dark-accent);
   --global-distill-app-color: #{v.$grey-color-light};
-  --global-divider-color: rgba(125, 192, 255, 0.18);
-  --global-page-gradient:
-    radial-gradient(circle at top left, rgba(0, 118, 223, 0.28), transparent 28%), linear-gradient(180deg, #08111b 0%, #0d1f31 100%);
-  --global-panel-bg-color: rgba(14, 28, 44, 0.82);
-  --global-card-bg-color: #0f2134;
+  --global-divider-color: var(--dark-border);
+  --global-page-gradient: none;
+  --global-panel-bg-color: var(--dark-surface);
+  --global-navbar-bg-color: var(--dark-navbar);
+  --global-card-bg-color: var(--dark-card);
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$white-color, "red", $space: rgb)},
     #{color.channel(v.$white-color, "green", $space: rgb)},
@@ -125,88 +132,17 @@ html[data-theme="dark"] {
   display: block;
 }
 
-html[data-theme-setting="dark"] {
-  #light-toggle-system {
-    display: none;
-  }
-
+html[data-theme="dark"] {
   #light-toggle-dark {
-    display: inline-block;
+    display: none;
   }
 
   #light-toggle-light {
-    display: none;
+    display: inline-block;
   }
 
   #back-to-top {
     color: var(--global-back-to-top-text-color);
     background: var(--global-back-to-top-bg-color);
   }
-}
-
-html[data-theme-setting="light"] {
-  #light-toggle-system {
-    display: none;
-  }
-
-  #light-toggle-dark {
-    display: none;
-  }
-
-  #light-toggle-light {
-    display: inline-block;
-  }
-}
-
-.fa-half-sun-moon {
-  position: relative;
-  display: inline-block;
-
-  --fa-font: var(--fa-font-solid);
-  speak-as: none;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  width: 1em;
-  height: 1em;
-}
-
-.fa-half-sun-moon::before,
-.fa-half-sun-moon::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  top: -0.5px;
-  bottom: -0.5px;
-  text-align: center;
-  line-height: 1em;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  font: var(--fa-font);
-}
-
-/* Left half: MOON */
-.fa-half-sun-moon::before {
-  content: "\f111";
-  color: var(--global-text-color);
-  clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
-}
-
-/* Right half: SUN */
-.fa-half-sun-moon::after {
-  content: "\f185";
-  color: var(--global-text-color);
-  clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
-  right: -1.5px; /* slight overflow to avoid right-edge clipping */
-  transform: translateX(-1px); /* visually re-center the sun half */
-}
-
-#light-toggle:hover .fa-half-sun-moon::before {
-  color: var(--global-theme-color);
-}
-
-#light-toggle:hover .fa-half-sun-moon::after {
-  color: var(--global-theme-color);
 }
