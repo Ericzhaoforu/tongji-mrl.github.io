@@ -270,7 +270,14 @@
 }
 
 .system-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
+  width: min(820px, 100%);
+  margin-inline: auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .system-card {
@@ -309,6 +316,38 @@
   dd {
     margin: 0.2rem 0 0;
   }
+}
+
+.system-capability-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.join-contact-panel {
+  margin-top: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.75rem;
+  background: var(--global-card-bg-color);
+
+  h3 {
+    margin-top: 0;
+  }
+
+  ol {
+    padding-left: 1.25rem;
+  }
+}
+
+.join-contact-disabled {
+  cursor: default;
+  opacity: 0.75;
+}
+
+.join-contact-note {
+  margin: 0.85rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
 }
 
 .mission-header {

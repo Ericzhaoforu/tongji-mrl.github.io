@@ -5,7 +5,7 @@
 .navbar {
   box-shadow: 0 14px 36px rgba(0, 54, 159, 0.1);
   border-bottom: 1px solid var(--global-divider-color);
-  background: var(--global-panel-bg-color);
+  background: var(--global-navbar-bg-color);
   backdrop-filter: blur(14px);
   opacity: 0.98;
 }
@@ -169,8 +169,7 @@
   }
 }
 
-#light-toggle,
-#search-toggle {
+#light-toggle {
   border: 0;
   background-color: inherit;
   color: var(--global-text-color);
@@ -197,19 +196,37 @@
   justify-content: center;
 }
 
+#light-toggle svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+html[data-theme="dark"] {
+  .navbar {
+    box-shadow: 0 0.35rem 1.25rem rgba(0, 0, 0, 0.18);
+  }
+
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link:hover,
+  .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link,
+  #light-toggle:hover {
+    background: var(--global-theme-color);
+    box-shadow: none;
+  }
+}
+
 @media (min-width: 576px) {
   #light-toggle {
     transform: translateY(4px);
   }
 }
 
-#search-toggle {
-  padding: 0.2rem 0.75rem;
-}
-
 .navbar .navbar-brand,
 .navbar .nav-link,
-.navbar #search-toggle,
 .navbar #light-toggle {
   position: relative;
   z-index: 1;

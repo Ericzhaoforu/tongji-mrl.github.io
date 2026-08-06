@@ -3,22 +3,16 @@
   name: Uncrewed Surface Vehicle
   role: Surface navigation and coordinated mission execution.
   status: Details in preparation
+  key_capabilities: []
   related_missions: [Mission Task 1, Mission Task 3, Mission Task 4]
-  description: Verified technical details and platform capabilities will be published as development continues.
-  image:
-- id: uuv
-  abbreviation: UUV
-  name: Uncrewed Underwater Vehicle
-  role: Underwater support for coordinated multi-domain operations.
-  status: Details in preparation
-  related_missions: [Mission Task 4]
-  description: Verified technical details and platform capabilities will be published as development continues.
+  description:
   image:
 - id: uav
   abbreviation: UAV
   name: Uncrewed Aerial Vehicle
   role: Aerial perception, coordination and logistics support.
   status: Details in preparation
+  key_capabilities: []
   related_missions: [Mission Task 1, Mission Task 3, Mission Task 4]
-  description: Verified technical details and platform capabilities will be published as development continues.
+  description:
   image:

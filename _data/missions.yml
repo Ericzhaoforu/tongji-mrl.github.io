@@ -29,7 +29,7 @@
   title: Mission Task 4 — Dynamic Incident Response
   status: Planning
   overview: Receive a dynamic RoboCommand assignment, interrupt or adjust the current task, travel to a designated GPS area, loiter and report readiness, and then resume the original task. Advanced Tier preparation also considers response to a temporary exclusion zone.
-  systems: [USV, Surfaced UUV, UAV]
+  systems: [USV, UAV]
   highlights:
     - Dynamic RoboCommand task reception
     - Current mission interruption or adjustment
