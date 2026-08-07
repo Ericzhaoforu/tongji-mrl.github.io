@@ -4,7 +4,7 @@ members:
     name_en: Kun Cao
     role: Supervisor
     group: Leadership
-    photo: assets/img/team/Kun_Cao.jpg
+    photo: assets/img/team/member-placeholder.png
     leadership: true
     card_style: supervisor
     responsibilities: []
@@ -17,7 +17,7 @@ members:
     name_en: Jiayan Zhao
     role: Team Leader
     group: Leadership
-    photo: assets/img/team/Jiayan_Zhao.jpg
+    photo: assets/img/team/member-placeholder.png
     leadership: true
     card_style: coordinator
     responsibilities: []
@@ -30,7 +30,7 @@ members:
     name_en: Yi Wang
     role: Deputy Team Leader
     group: Leadership
-    photo: assets/img/team/Yi_Wang.jpg
+    photo: assets/img/team/member-placeholder.png
     leadership: true
     card_style: coordinator
     responsibilities: []
@@ -43,7 +43,7 @@ members:
     name_en: Hongye Ma
     role: Leader
     group: Hardware
-    photo: assets/img/team/Hongye_Ma.jpg
+    photo: assets/img/team/member-placeholder.png
     leadership: false
     responsibilities: []
     email:
@@ -58,7 +58,7 @@ members:
     name_en: Zhanpeng Qu
     role:
     group: Hardware
-    photo: assets/img/team/Zhanpeng_Qu.jpg
+    photo: assets/img/team/member-placeholder.png
     leadership: false
     responsibilities: []
     email:
@@ -76,7 +76,7 @@ members:
     name_en: Yi Pang
     role: Leader
     group: Hardware
-    photo: assets/img/team/Yi_Pang.jpg
+    photo: assets/img/team/member-placeholder.png
     leadership: false
     responsibilities: []
     email:
@@ -91,7 +91,7 @@ members:
     name_en: Xuanyu Yang
     role: Leader
     group: Software
-    photo: assets/img/team/Xuanyu_Yang.jpg
+    photo: assets/img/team/member-placeholder.png
     leadership: false
     responsibilities: []
     email:
@@ -106,7 +106,7 @@ members:
     name_en: Yuhan Li
     role:
     group: Outreach
-    photo: assets/img/team/Yuhan_Li.jpg
+    photo: assets/img/team/member-placeholder.png
     leadership: false
     responsibilities: []
     email:
@@ -124,7 +124,7 @@ members:
     name_en: Ci Song
     role: Leader
     group: Software
-    photo: assets/img/team/Ci_Song.jpg
+    photo: assets/img/team/member-placeholder.png
     leadership: false
     responsibilities: []
     email:
@@ -139,7 +139,7 @@ members:
     name_en: Yaxin Shao
     role:
     group: Software
-    photo: assets/img/team/Yaxin_Shao.jpg
+    photo: assets/img/team/member-placeholder.png
     leadership: false
     responsibilities: []
     email:
@@ -154,7 +154,7 @@ members:
     name_en: Yunhuan Cai
     role:
     group: Software
-    photo: assets/img/team/Yunhuan_Cai.jpg
+    photo: assets/img/team/member-placeholder.png
     leadership: false
     responsibilities: []
     email:
@@ -169,7 +169,7 @@ members:
     name_en: Cailin Yang
     role: Leader
     group: Outreach
-    photo: assets/img/team/Cailin_Yang.jpg
+    photo: assets/img/team/member-placeholder.png
     leadership: false
     responsibilities: []
     email:
