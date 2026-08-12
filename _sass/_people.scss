@@ -60,6 +60,16 @@ body:has(.team-about-page) {
   background: var(--about-surface);
 }
 
+.team-intro-section--compact {
+  grid-template-columns: 1fr;
+  min-height: 0;
+  padding-block: clamp(32px, 5vw, 56px);
+
+  .team-intro__content {
+    max-width: 760px;
+  }
+}
+
 .team-intro__content {
   min-width: 0;
 
@@ -272,8 +282,10 @@ body:has(.team-about-page) {
   height: 60px;
   margin: 0;
   border: 2px solid var(--about-border);
-  border-radius: 50%;
-  object-fit: cover;
+  border-radius: 0.65rem;
+  background: #ffffff;
+  object-fit: contain;
+  object-position: center;
 }
 
 .member-primary {
@@ -325,16 +337,13 @@ body:has(.team-about-page) {
 }
 
 .member-row-support {
+  grid-template-columns: minmax(0, 1fr) auto;
+  min-height: 76px;
   cursor: default;
 
   &:hover {
     border-color: var(--about-border);
     transform: none;
-  }
-
-  .member-photo {
-    filter: grayscale(25%);
-    opacity: 0.78;
   }
 
   .member-name,
@@ -458,10 +467,17 @@ html[data-theme="dark"] .team-about-page {
 }
 
 .member-dialog-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+  display: grid;
+  gap: 0.65rem;
   margin-top: 1.5rem;
+
+  a {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
 }
 
 .member-dialog-close {
@@ -616,6 +632,10 @@ body.member-dialog-open {
       width: 52px;
       height: 52px;
     }
+  }
+
+  .member-row-support {
+    grid-template-columns: minmax(0, 1fr) auto;
   }
 }
 
