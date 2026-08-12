@@ -8,7 +8,7 @@ nav_order: 7
 ---
 
 <main class="team-about-page">
-  <section class="team-intro-section about-section-reveal">
+  <section class="team-intro-section{% unless site.data.about.team_photo %} team-intro-section--compact{% endunless %} about-section-reveal">
     <div class="team-intro__content">
       <p class="section-label">About Tongji MRL</p>
       <h1>About Us</h1>
@@ -16,8 +16,8 @@ nav_order: 7
       <p>Our current development spans surface and aerial platforms.</p>
     </div>
 
-    <figure class="team-photo-slot">
-      {% if site.data.about.team_photo %}
+    {% if site.data.about.team_photo %}
+      <figure class="team-photo-slot">
         <img
           src="{{ site.data.about.team_photo | relative_url }}"
           alt="{{ site.data.about.team_photo_alt }}"
@@ -25,17 +25,8 @@ nav_order: 7
           height="1000"
           loading="eager"
         >
-      {% else %}
-        <div class="team-photo-placeholder" role="img" aria-label="Team photo in preparation">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-            <circle cx="8.5" cy="9" r="1.5"></circle>
-            <path d="m4 17 5-5 3.5 3.5 2-2L20 19"></path>
-          </svg>
-          <span>Team photo in preparation</span>
-        </div>
-      {% endif %}
-    </figure>
+      </figure>
+    {% endif %}
 
   </section>
 
@@ -76,13 +67,13 @@ nav_order: 7
     </div>
   </section>
 
-  <section class="section-panel outreach-section about-section-reveal" aria-labelledby="outreach-title">
+  <section class="section-panel publicity-section about-section-reveal" aria-labelledby="publicity-title">
     <header class="section-heading">
       <p class="section-label">Communication</p>
-      <h2 id="outreach-title">Outreach Group</h2>
+      <h2 id="publicity-title">Publicity Group</h2>
     </header>
     <div class="subgroup-stack">
-      {% include team-subgroup.liquid subgroup="Outreach" %}
+      {% include team-subgroup.liquid subgroup="Publicity" %}
     </div>
   </section>
 
