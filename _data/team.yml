@@ -18,11 +18,11 @@ members:
     name_en: Jiayan Zhao
     role: Team Leader
     group: Leadership
-    photo: assets/img/team/member-placeholder.png
+    photo: assets/img/team/member-jiayan-zhao.jpg
     leadership: true
     card_style: coordinator
     responsibilities: []
-    email:
+    email: ericzjy11@gmail.com
     bio:
     links: {}
     assignments: []
@@ -55,12 +55,12 @@ members:
       - subgroup: Control
         role: Leader
         auxiliary: false
-  - id: zhanpeng-qu
+  - id: zhankun-qu
     name_zh: 屈展鹍
-    name_en: Zhanpeng Qu
+    name_en: Zhankun Qu
     role:
     group: Hardware
-    photo: assets/img/team/member-zhanpeng-qu.jpg
+    photo: assets/img/team/member-zhankun-qu.jpg
     leadership: false
     responsibilities: []
     email: 2552268@tongji.edu.cn
