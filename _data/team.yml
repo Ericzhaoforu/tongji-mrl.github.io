@@ -1,23 +1,24 @@
 members:
   - id: kun-cao
-    name_zh:
+    name_zh: 操锟
     name_en: Kun Cao
     role: Supervisor
     group: Leadership
-    photo: assets/img/team/Kun_Cao.jpg
+    photo: assets/img/team/member-kun-cao.jpg
     leadership: true
     card_style: supervisor
     responsibilities: []
-    email:
+    email: caokun@tongji.edu.cn
     bio:
-    links: {}
+    links:
+      website: https://ntu-caokun.github.io/
     assignments: []
   - id: jiayan-zhao
-    name_zh:
+    name_zh: 赵佳研
     name_en: Jiayan Zhao
     role: Team Leader
     group: Leadership
-    photo: assets/img/team/Jiayan_Zhao.jpg
+    photo: assets/img/team/member-placeholder.png
     leadership: true
     card_style: coordinator
     responsibilities: []
@@ -26,42 +27,43 @@ members:
     links: {}
     assignments: []
   - id: yi-wang
-    name_zh:
+    name_zh: 王祎
     name_en: Yi Wang
     role: Deputy Team Leader
     group: Leadership
-    photo: assets/img/team/Yi_Wang.jpg
+    photo: assets/img/team/member-yi-wang.jpg
     leadership: true
     card_style: coordinator
     responsibilities: []
-    email:
+    email: wy038moli@gmail.com
     bio:
     links: {}
     assignments: []
   - id: hongye-ma
-    name_zh:
+    name_zh: 马宏烨
     name_en: Hongye Ma
     role: Leader
     group: Hardware
-    photo: assets/img/team/Hongye_Ma.jpg
+    photo: assets/img/team/member-hongye-ma.jpg
     leadership: false
     responsibilities: []
-    email:
+    email: 2451490@tongji.edu.cn
     bio:
-    links: {}
+    links:
+      github: https://github.com/eurekavvvv
     assignments:
       - subgroup: Control
         role: Leader
         auxiliary: false
   - id: zhanpeng-qu
-    name_zh:
+    name_zh: 屈展鹍
     name_en: Zhanpeng Qu
     role:
     group: Hardware
-    photo: assets/img/team/Zhanpeng_Qu.jpg
+    photo: assets/img/team/member-zhanpeng-qu.jpg
     leadership: false
     responsibilities: []
-    email:
+    email: 2552268@tongji.edu.cn
     bio:
     links: {}
     assignments:
@@ -72,14 +74,14 @@ members:
         role:
         auxiliary: true
   - id: yi-pang
-    name_zh:
+    name_zh: 庞毅
     name_en: Yi Pang
     role: Leader
     group: Hardware
-    photo: assets/img/team/Yi_Pang.jpg
+    photo: assets/img/team/member-yi-pang.jpg
     leadership: false
     responsibilities: []
-    email:
+    email: 2551691@tongji.edu.cn
     bio:
     links: {}
     assignments:
@@ -87,47 +89,62 @@ members:
         role: Leader
         auxiliary: false
   - id: xuanyu-yang
-    name_zh:
+    name_zh: 杨萱昱
     name_en: Xuanyu Yang
     role: Leader
     group: Software
-    photo: assets/img/team/Xuanyu_Yang.jpg
+    photo: assets/img/team/member-xuanyu-yang.jpg
     leadership: false
     responsibilities: []
-    email:
+    email: 2553832@tongji.edu.cn
     bio:
     links: {}
     assignments:
       - subgroup: Perception
         role: Leader
         auxiliary: false
-  - id: yuhan-li
-    name_zh:
-    name_en: Yuhan Li
+  - id: bohan-zhang
+    name_zh: 张博涵
+    name_en: Bohan Zhang
     role:
-    group: Outreach
-    photo: assets/img/team/Yuhan_Li.jpg
+    group: Software
+    photo: assets/img/team/member-bohan-zhang.jpg
     leadership: false
     responsibilities: []
-    email:
+    email: 2450826@tongji.edu.cn
+    bio:
+    links: {}
+    assignments:
+      - subgroup: Perception
+        role:
+        auxiliary: false
+  - id: yuhan-li
+    name_zh: 李语涵
+    name_en: Yuhan Li
+    role:
+    group: Publicity
+    photo: assets/img/team/member-yuhan-li.jpg
+    leadership: false
+    responsibilities: []
+    email: qianxiao616@gmail.com
     bio:
     links: {}
     assignments:
       - subgroup: Perception
         role:
         auxiliary: true
-      - subgroup: Outreach
+      - subgroup: Publicity
         role:
         auxiliary: false
   - id: ci-song
-    name_zh:
+    name_zh: 宋词
     name_en: Ci Song
     role: Leader
     group: Software
-    photo: assets/img/team/Ci_Song.jpg
+    photo: assets/img/team/member-ci-song.jpg
     leadership: false
     responsibilities: []
-    email:
+    email: 2553224@tongji.edu.cn
     bio:
     links: {}
     assignments:
@@ -135,14 +152,14 @@ members:
         role: Leader
         auxiliary: false
   - id: yaxin-shao
-    name_zh:
+    name_zh: 邵雅欣
     name_en: Yaxin Shao
     role:
     group: Software
-    photo: assets/img/team/Yaxin_Shao.jpg
+    photo: assets/img/team/member-yaxin-shao.jpg
     leadership: false
     responsibilities: []
-    email:
+    email: 2551137@tongji.edu.cn
     bio:
     links: {}
     assignments:
@@ -150,14 +167,14 @@ members:
         role:
         auxiliary: false
   - id: yunhuan-cai
-    name_zh:
+    name_zh: 蔡昀桓
     name_en: Yunhuan Cai
     role:
     group: Software
-    photo: assets/img/team/Yunhuan_Cai.jpg
+    photo: assets/img/team/member-yunhuan-cai.jpg
     leadership: false
     responsibilities: []
-    email:
+    email: yunhuanccc@gmail.com
     bio:
     links: {}
     assignments:
@@ -165,20 +182,20 @@ members:
         role:
         auxiliary: false
   - id: cailin-yang
-    name_zh:
+    name_zh: 杨采霖
     name_en: Cailin Yang
     role: Leader
-    group: Outreach
-    photo: assets/img/team/Cailin_Yang.jpg
+    group: Publicity
+    photo: assets/img/team/member-cailin-yang.jpg
     leadership: false
     responsibilities: []
-    email:
+    email: 2551161@tongji.edu.cn
     bio:
     links: {}
     assignments:
       - subgroup: Planning
         role:
         auxiliary: true
-      - subgroup: Outreach
+      - subgroup: Publicity
         role: Leader
         auxiliary: false

@@ -37,22 +37,30 @@
         <h3>About</h3>
         <p>{{ member.bio }}</p>
       {% endif %}
-      {% if member.email or member.links.github or member.links.linkedin %}
+      {% if member.email or member.links.github or member.links.linkedin or member.links.website %}
         <div class="member-dialog-links" aria-label="{{ member.name_en }} links">
           {% if member.email -%}
-            <a href="mailto:{{ member.email }}">Email</a>
+            <a href="mailto:{{ member.email }}"
+              ><strong>Email:</strong> <span>{{ member.email }}</span></a
+            >
           {%- endif %}
           {% if member.links.github -%}
-            <a href="{{ member.links.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="{{ member.links.github }}" target="_blank" rel="noopener noreferrer"
+              ><strong>GitHub:</strong> <span>{{ member.links.github }}</span></a
+            >
           {%- endif %}
           {% if member.links.linkedin -%}
-            <a href="{{ member.links.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="{{ member.links.linkedin }}" target="_blank" rel="noopener noreferrer"
+              ><strong>LinkedIn:</strong> <span>{{ member.links.linkedin }}</span></a
+            >
+          {%- endif %}
+          {% if member.links.website -%}
+            <a href="{{ member.links.website }}" target="_blank" rel="noopener noreferrer"
+              ><strong>Website:</strong> <span>{{ member.links.website }}</span></a
+            >
           {%- endif %}
         </div>
       {% endif %}
-      {% unless member.bio or member.email or member.links.github or member.links.linkedin or member.responsibilities.size > 0 %}
-        <p class="member-dialog-empty">Additional profile details will be published after confirmation.</p>
-      {% endunless %}
     </div>
   </div>
 </dialog>

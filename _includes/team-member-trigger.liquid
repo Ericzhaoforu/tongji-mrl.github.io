@@ -1,7 +1,6 @@
 {% assign member = include.member %}
 {% if include.assignment.auxiliary %}
   <div class="member-row member-row-support" aria-label="{{ member.name_en }}, auxiliary member of {{ include.assignment.subgroup }}">
-    <img class="member-photo" src="{{ member.photo | relative_url }}" alt="">
     <span class="member-primary">
       <strong class="member-name">{{ member.name_en }}</strong>
       {% if member.name_zh -%}
