@@ -6,7 +6,7 @@
   key_capabilities: []
   related_missions: [Mission Task 1, Mission Task 3, Mission Task 4]
   description:
-  image:
+  image: /assets/img/robot-x/usv.jpg
 - id: uav
   abbreviation: UAV
   name: Uncrewed Aerial Vehicle
@@ -15,4 +15,4 @@
   key_capabilities: []
   related_missions: [Mission Task 1, Mission Task 3, Mission Task 4]
   description:
-  image:
+  image: /assets/img/robot-x/uav.jpg
