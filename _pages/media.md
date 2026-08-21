@@ -24,7 +24,7 @@ description: Verified photos and videos from Tongji MRL activities and RobotX 20
               {% endif %}
               {% if item.video %}
                 <div class="responsive-video">
-                  {% include video.liquid path=item.video alt=item.alt controls=true %}
+                  {% include video.liquid path=item.video poster=item.poster title=item.title alt=item.alt preload="metadata" controls=true playsinline=true %}
                 </div>
               {% endif %}
               <h3>{{ item.title }}</h3>

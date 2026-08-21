@@ -33,7 +33,13 @@
         title="{{ include.title }}"
       {% endif %}
       {% if include.alt %}
-        alt="{{ include.alt }}"
+        aria-label="{{ include.alt }}"
+      {% endif %}
+      {% if include.preload %}
+        preload="{{ include.preload }}"
+      {% endif %}
+      {% if include.playsinline %}
+        playsinline
       {% endif %}
       {% if include.autoplay %}
         autoplay
@@ -48,9 +54,9 @@
         muted
       {% endif %}
       {% if include.poster %}
-        poster="{{ include.poster }}"
+        poster="{{ include.poster | relative_url }}"
       {% endif %}
-    />
+    ></video>
 
   {% else %}
     <iframe
