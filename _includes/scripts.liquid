@@ -375,3 +375,7 @@
 {% if page.permalink == '/people/' %}
   <script defer src="{{ '/assets/js/member-dialog.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
+
+{% if page.permalink == '/media/' %}
+  <script defer src="{{ '/assets/js/media-wall.js' | relative_url | bust_file_cache }}"></script>
+{% endif %}

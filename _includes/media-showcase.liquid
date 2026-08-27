@@ -1,0 +1,72 @@
+<section
+  class="media-showcase"
+  id="{{ include.id }}"
+  data-media-showcase
+  data-item-count="{{ include.items.size }}"
+  aria-labelledby="{{ include.id }}-title"
+  tabindex="0"
+>
+  <header class="media-section-intro media-showcase-intro">
+    <p class="media-section-kicker">{{ include.kicker }}</p>
+    <h2 id="{{ include.id }}-title">{{ include.title }}</h2>
+    <p>{{ include.description }}</p>
+  </header>
+
+  <div class="media-showcase-shell">
+    <div class="media-showcase-stage" aria-live="polite">
+      {% for item in include.items %}
+        {% assign preview = item.image | default: item.poster %}
+        <article
+          class="media-showcase-item{% if forloop.first %} is-current{% endif %}"
+          data-media-item
+          data-media-index="{{ forloop.index0 }}"
+          {% unless forloop.first %}
+            hidden aria-hidden="true"
+          {% endunless %}
+          style="--media-position: {{ item.object_position | default: 'center' }};"
+        >
+          <div class="media-showcase-visual">
+            {% include figure.liquid path=preview alt=item.alt class="media-showcase-image" sizes="(max-width: 699px) 100vw, 1080px" %}
+            {% if item.video %}
+              <button
+                type="button"
+                class="media-showcase-play"
+                aria-label="Play {{ item.title }}"
+                data-media-open
+                data-video-src="{{ item.video | relative_url }}"
+                data-video-poster="{{ item.poster | relative_url }}"
+                data-video-title="{{ item.title }}"
+                data-video-category="{{ item.category }}"
+              >
+                <span aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+              </button>
+            {% endif %}
+          </div>
+          <div class="media-showcase-copy">
+            <div class="media-showcase-labels">
+              <span>{{ item.category }}</span>
+              <span>
+                {%- if item.video %}Video{% else %}Photo{% endif -%}
+              </span>
+              {% if item.duration -%}
+                <span>{{ item.duration }}</span>
+              {%- endif %}
+            </div>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="media-showcase-controls">
+      <button type="button" data-media-previous aria-label="Previous {{ include.title }} item">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+      </button>
+      <span data-media-status aria-live="polite">01 / {{ include.items.size | prepend: '0' | slice: -2, 2 }}</span>
+      <button type="button" data-media-next aria-label="Next {{ include.title }} item">
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</section>

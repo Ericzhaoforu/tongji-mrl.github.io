@@ -16,7 +16,7 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %} {% if page.immersive_hero %}immersive-home{% endif %}">
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %} {% if page.immersive_hero %}immersive-home{% endif %} {% if page.permalink == '/media/' %}media-layout{% endif %}">
     <!-- Header -->
     {% include header.liquid %}
 

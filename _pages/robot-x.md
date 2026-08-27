@@ -21,9 +21,9 @@ Tongji MRL is a multidisciplinary student team from Tongji University developing
 
 <div class="system-grid">
   {% for system in site.data.systems %}
-    <article class="system-card">
+    <article class="system-card" id="{{ system.id }}">
       {% if system.image %}
-        {% include figure.liquid path=system.image alt=system.name class="img-fluid rounded" %}
+        {% include figure.liquid path=system.image alt=system.image_alt class="img-fluid rounded" sizes="(max-width: 768px) 95vw, 410px" %}
       {% else %}
         <div class="system-image-placeholder" role="img" aria-label="{{ system.name }} image in preparation">Platform image pending</div>
       {% endif %}

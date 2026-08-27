@@ -1,17 +1,146 @@
-- title: Tongji RobotX logo design
+- id: usv-water-navigation
+  title: USV Water Navigation
+  category: Field Tests
+  date: 2026-08-19
+  video: assets/video/usv-water-navigation.mp4
+  poster: assets/img/usv-water-navigation-poster.jpg
+  duration: "0:05"
+  alt: Tongji MRL USV moving across the water during a field test
+  description: A short water-test view of the USV underway.
+  tags: [field-tests, usv]
+  showcase: true
+  showcase_group: usv
+  showcase_order: 1
+  object_position: center
+  verified: true
+- id: uav-flight-test
+  title: UAV Flight Test
+  category: Field Tests
+  date:
+  image: assets/img/robot-x/uav.jpg
+  alt: Tongji MRL UAV flying outdoors beside a building
+  description: A close outdoor view of the UAV in flight.
+  tags: [field-tests, uav]
+  showcase: true
+  showcase_group: uav
+  showcase_order: 1
+  object_position: center 54%
+  verified: true
+- id: usv-assembly
+  title: USV Assembly Session
+  category: Robot Assembly
+  date:
+  video: assets/video/usv-assembly.mp4
+  poster: assets/img/usv-assembly-poster.jpg
+  duration: "0:12"
+  alt: Team members assembling hardware on the Tongji MRL USV
+  description: Team members working together on the USV hardware.
+  tags: [robot-assembly, team-activities, usv]
+  showcase: true
+  showcase_group: usv
+  showcase_order: 2
+  object_position: center
+  verified: true
+- id: usv-electronics-wiring
+  title: USV Electronics Wiring
+  category: Robot Assembly
+  date:
+  video: assets/video/usv-electronics-wiring.mp4
+  poster: assets/img/usv-electronics-wiring-poster.jpg
+  duration: "0:10"
+  alt: Hands connecting wiring to an electronics board inside the USV
+  description: A close view of electronics wiring during workshop preparation.
+  tags: [robot-assembly, usv]
+  showcase: true
+  showcase_group: usv
+  showcase_order: 3
+  object_position: center
+  verified: true
+- id: usv-field-test-record
+  title: USV Field Test in Heavy Rain
+  category: Field Tests
+  date: 2026-08-20
+  video: assets/video/usv-field-test-diagnosis-web.mp4
+  poster: assets/img/usv-field-test-diagnosis-poster.jpg
+  duration: "0:28"
+  alt: Team members in rain ponchos working around a USV beside a pond during heavy rain
+  description: A field test recording used to observe system behavior and support subsequent debugging and iteration.
+  tags: [field-tests, team-activities, usv]
+  showcase: true
+  showcase_group: usv
+  showcase_order: 5
+  object_position: center
+  verified: true
+- id: usv-deck-overview
+  title: USV Deck Overview
+  category: Robot Assembly
+  date:
+  video: assets/video/usv-deck-overview.mp4
+  poster: assets/img/usv-deck-overview-poster.jpg
+  duration: "0:11"
+  alt: An overhead view moving across the assembled Tongji MRL USV deck
+  description: A workshop overview of the assembled deck and visible hardware layout.
+  tags: [robot-assembly, usv]
+  showcase: true
+  showcase_group: usv
+  showcase_order: 4
+  object_position: center
+  verified: true
+- id: rain-field-test-team
+  title: Rainy-Day Field Test Team
+  category: Team Activities
+  date: 2026-08-20
+  image: assets/img/team-rain-field-test.jpg
+  alt: Three Tongji MRL team members wearing rain ponchos during an outdoor field test
+  description: Team members continuing field-test preparations in rainy conditions.
+  tags: [team-activities, field-tests]
+  showcase: false
+  showcase_order: 6
+  object_position: center 42%
+  verified: true
+- id: usv-water-test
+  title: USV Water Test
+  category: Field Tests
+  date:
+  image: assets/img/robot-x/usv.jpg
+  alt: Tongji MRL USV underway on calm water during a field test
+  description: A close view of the USV moving across calm water.
+  tags: [field-tests, usv]
+  showcase: false
+  object_position: center
+  verified: true
+- id: usv-water-test-bridge
+  title: USV Water Test by the Bridge
+  category: Field Tests
+  date: 2026-08-19
+  image: assets/img/usv-water-test-bridge.jpg
+  alt: Tongji MRL USV moving across a pond near a pedestrian bridge
+  description: A wide field-test view of the USV operating on the water.
+  tags: [field-tests, usv]
+  showcase: false
+  showcase_order: 3
+  object_position: center
+  verified: true
+- id: team-usv-setup
+  title: Preparing the USV
+  category: Team Activities
+  date: 2026-08-19
+  image: assets/img/team-usv-setup.jpg
+  alt: Three team members fitting lifting straps to the USV beside the water
+  description: Team members preparing the USV before moving it to the water.
+  tags: [team-activities, field-tests, usv]
+  showcase: false
+  showcase_order: 2
+  object_position: center 42%
+  verified: true
+- id: logo-design
+  title: Tongji RobotX Logo Design
   category: Design Process
   date:
   image: assets/img/TJMRL.jpg
-  video:
   alt: Blue Tongji RobotX logo with a stylized boat and waves
   description: Tongji RobotX visual identity.
-  verified: true
-- title: USV Field Test in Heavy Rain
-  category: Field Tests
-  date: 2026-08-20
-  image:
-  video: assets/video/usv-field-test-diagnosis-web.mp4
-  poster: assets/img/usv-field-test-diagnosis-poster.jpg
-  alt: Team members in rain ponchos working around a USV beside a pond during heavy rain
-  description: A field test recording showing team members protecting and working around the USV after heavy rain interrupts the planned test.
+  tags: [design-process]
+  showcase: false
+  object_position: center
   verified: true
