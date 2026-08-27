@@ -55,6 +55,9 @@ immersive_hero: true
       <div class="home-summary-grid home-systems-grid">
         {% for system in site.data.systems %}
           <article class="home-summary-card">
+            {% if system.image %}
+              {% include figure.liquid path=system.image alt=system.image_alt class="img-fluid" sizes="(max-width: 768px) 95vw, 360px" %}
+            {% endif %}
             <span>{{ system.abbreviation }}</span>
             <h3>{{ system.name }}</h3>
             <p>{{ system.role }}</p>
