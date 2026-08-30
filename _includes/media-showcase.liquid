@@ -23,10 +23,10 @@
           {% unless forloop.first %}
             hidden aria-hidden="true"
           {% endunless %}
-          style="--media-position: {{ item.object_position | default: 'center' }};"
+          style="--media-position: {{ item.object_position | default: 'center' }}; --media-fit: {{ item.media_fit | default: 'cover' }};"
         >
           <div class="media-showcase-visual">
-            {% include figure.liquid path=preview alt=item.alt class="media-showcase-image" sizes="(max-width: 699px) 100vw, 1080px" %}
+            {% include figure.liquid path=preview alt=item.alt class="media-showcase-image" sizes="(max-width: 699px) 100vw, 800px" %}
             {% if item.video %}
               <button
                 type="button"

@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (changing || items.length < 2) return;
 
       changing = true;
+      showcase.classList.add("is-changing");
       releaseVideo();
 
       const outgoing = items[currentIndex];
@@ -111,9 +112,10 @@ document.addEventListener("DOMContentLoaded", () => {
         currentIndex = targetIndex;
         updateStatus();
         changing = false;
+        showcase.classList.remove("is-changing");
       };
 
-      window.setTimeout(finish, reduceMotion ? 20 : 370);
+      window.setTimeout(finish, reduceMotion ? 20 : 350);
     };
 
     if (items.length < 2) {

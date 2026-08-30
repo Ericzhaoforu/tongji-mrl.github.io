@@ -26,15 +26,19 @@ description: Build, test, observe and iterate — selected moments from Tongji M
 
     <div class="media-platform-grid">
       {% for system in site.data.systems %}
-        <article class="media-platform-card" data-media-reveal style="--platform-position: {{ system.media_object_position | default: 'center' }}; --platform-scale: {{ system.media_scale | default: 1 }};">
-          <div class="media-platform-visual">
-            {% include figure.liquid path=system.image alt=system.image_alt class="media-platform-image" sizes="(max-width: 699px) 100vw, 50vw" %}
-          </div>
-          <div class="media-platform-copy">
-            <span>{{ system.abbreviation }}</span>
-            <h3>{{ system.name }}</h3>
-            <p>{{ system.media_description }}</p>
-            <a href="{{ '/robot-x/' | relative_url }}#{{ system.id }}">{{ system.media_link_label }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <article class="media-platform-card" data-media-reveal>
+          <div class="media-platform-float">
+            <div class="media-platform-surface">
+              <div class="media-platform-visual" style="--platform-position: {{ system.media_object_position | default: 'center' }}; --platform-fit: {{ system.media_fit | default: 'cover' }};">
+                {% include figure.liquid path=system.image alt=system.image_alt class="media-platform-image" sizes="(max-width: 699px) 100vw, 50vw" %}
+              </div>
+              <div class="media-platform-copy">
+                <span>{{ system.abbreviation }}</span>
+                <h3>{{ system.name }}</h3>
+                <p>{{ system.media_description }}</p>
+                <a href="{{ '/robot-x/' | relative_url }}#{{ system.id }}">{{ system.media_link_label }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
           </div>
         </article>
       {% endfor %}
@@ -43,7 +47,7 @@ description: Build, test, observe and iterate — selected moments from Tongji M
   </section>
 
 {% include media-showcase.liquid id="usv-media" kicker="USV Field Notes" title="USV Media" description="Surface-platform testing, assembly and electronics preparation." items=usv_media %}
-{% include media-showcase.liquid id="uav-media" kicker="UAV Field Notes" title="UAV Media" description="Aerial-platform testing and development records. More verified media will be added as it becomes available." items=uav_media %}
+{% include media-showcase.liquid id="uav-media" kicker="UAV Field Notes" title="UAV Media" description="Aerial-platform testing and development records." items=uav_media %}
 </div>
 
 <dialog class="media-viewer" data-media-viewer aria-labelledby="media-viewer-title">
