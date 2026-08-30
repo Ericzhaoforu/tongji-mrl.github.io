@@ -14,17 +14,33 @@
   object_position: center
   verified: true
 - id: uav-flight-test
-  title: UAV Flight Test
+  title: UAV Field Setup
   category: Field Tests
   date:
   image: assets/img/robot-x/uav.jpg
-  alt: Tongji MRL UAV flying outdoors beside a building
-  description: A close outdoor view of the UAV in flight.
+  alt: Tongji MRL UAV in a field setup showing the airframe and landing gear clearly
+  description: A field setup still showing the UAV with its airframe and landing gear visible.
+  tags: [field-tests, uav]
+  showcase: true
+  showcase_group: uav
+  showcase_order: 2
+  object_position: center 56%
+  media_fit: contain
+  verified: true
+- id: uav-ground-to-flight-test
+  title: UAV Ground-to-Flight Test
+  category: Field Tests
+  date: 2026-08-19
+  video: assets/video/uav-flight-testing.mp4
+  poster: assets/img/uav-flight-testing-poster.jpg
+  duration: "0:36"
+  alt: Tongji MRL UAV preparing for takeoff and flying in a field test sequence
+  description: A field-test sequence showing the UAV in a ground-to-flight setup and live flight demonstration.
   tags: [field-tests, uav]
   showcase: true
   showcase_group: uav
   showcase_order: 1
-  object_position: center 54%
+  object_position: center
   verified: true
 - id: usv-assembly
   title: USV Assembly Session
